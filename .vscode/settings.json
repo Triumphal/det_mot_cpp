@@ -6,5 +6,6 @@
     "cmake.ignoreCMakeListsMissing": true,
     "python-envs.defaultEnvManager": "ms-python.python:system",
     "python-envs.defaultPackageManager": "ms-python.python:pip",
-    "python-envs.pythonProjects": []
+    "python-envs.pythonProjects": [],
+    "C_Cpp.clang_format_fallbackStyle": "Google"
 }

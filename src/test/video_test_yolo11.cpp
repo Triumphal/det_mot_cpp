@@ -8,10 +8,7 @@
 #include <spdlog/spdlog.h>
 #include "yolov11_trt_detect.h"
 #include "tqdm.h"
-
-
-
-
+#include "yaml-cpp/yaml.h"
 
 
 void infer_trt(int argc, char** argv){
@@ -42,10 +39,6 @@ void infer_trt(int argc, char** argv){
     }
 
     auto start_time = std::chrono::high_resolution_clock::now();
-
-    // 框的颜色
-    vector
-
 
 
     // 读取视频

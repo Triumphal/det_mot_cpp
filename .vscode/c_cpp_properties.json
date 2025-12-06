@@ -9,7 +9,8 @@
                 "/usr/include/opencv4/**",
                 "${workspaceFolder}/**",
                 "${workspaceFolder}/src/yolo_trt",
-                "${workspaceFolder}/include"
+                "${workspaceFolder}/src/3rd_party/include",
+                "${workspaceFolder}/src/include"
             ],
             "defines": [],
             "cStandard": "c17",
