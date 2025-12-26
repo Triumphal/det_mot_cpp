@@ -9,13 +9,14 @@
                 "/usr/include/opencv4/**",
                 "${workspaceFolder}/**",
                 "${workspaceFolder}/src/yolo_trt",
-                "${workspaceFolder}/src/3rd_party/include",
+                "${workspaceFolder}/src/mot/sort",
                 "${workspaceFolder}/src/include"
             ],
             "defines": [],
             "cStandard": "c17",
             "cppStandard": "gnu++17",
-            "intelliSenseMode": "linux-gcc-x64"
+            "intelliSenseMode": "linux-gcc-x64",
+            "compilerPath": "/usr/bin/gcc"
         }
     ],
     "version": 4

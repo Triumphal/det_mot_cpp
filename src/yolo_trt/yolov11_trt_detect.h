@@ -17,16 +17,16 @@ typedef struct _ImageSize {
 
 // 检测框结构体
 typedef struct _DetectionBox {
-    int xmin, ymin, xmax, ymax;  // 左上角和右下角坐标
-    int class_id;                  // 类别ID
-    float confidence;              // 置信度
-}DetectionBox;
+    double xmin, ymin, xmax, ymax;  // 左上角和右下角坐标
+    int class_id;                // 类别ID
+    float confidence;            // 置信度
+} DetectionBox;
 
 // yolo检测配置的
 typedef struct _YoloDetectConfig {
     float score_threshold;  // 置信度阈值= 0.25f;
     float nms_threshold;    // NMS 阈值= 0.45f;
-}YoloDetectConfig;
+} YoloDetectConfig;
 
 // 图像Pad的结构体 padding 一般是对称的，只需要记录左和上
 typedef struct _ImagePad {
@@ -54,11 +54,12 @@ private:
     SpdlogLogger m_logger;
 
     // 预处理和后处理需要的参数
-    float m_resize_scale = 1.0f; // 图片resize的比例
-    ImagePad m_image_pad{}; // 图片pad的尺寸
+    float m_resize_scale = 1.0f;  // 图片resize的比例
+    ImagePad m_image_pad{};       // 图片pad的尺寸
     YoloDetectConfig m_detect_config{0.25, 0.45};
+
 private:
-    void remap_bbox2ori(cv::Rect &bbox);// 坐标映射会原图
+    void remap_bbox2ori(cv::Rect& bbox);  // 坐标映射会原图
 
 public:
     inline vector<int> getWH() { return {m_input_shape[3], m_input_shape[2]}; }

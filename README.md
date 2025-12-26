@@ -22,7 +22,7 @@ cmake --build build
 | ----------- | ----------- | 
 | 单张图片的推理    | ✅[image_test_yolo11.cpp](./src/test/image_test_yolo11.cpp)  | 
 | 单个视频的推理    | ✅[video_test_yolo11.cpp](./src/test/video_test_yolo11.cpp)  |   
-| 多目标跟踪       | 🚧  | 
+| 多目标跟踪       | ✅[mot_test.cpp](./src/test/mot_test.cpp)  | 
 
 ### 2.1、单张图片的推理 image_test_yolo11.cpp
 - 这里的模型使用的是tensorrt的engine类型，
@@ -36,6 +36,11 @@ cmake --build build
 ./video_test_yolo11 <ideo_path> <model_path> <output_path>
 #                    视频路径        模型路径   处理后的保存路径
 ```
+### 2.3、多目标跟踪测试
+```shell
+./mot_test <ideo_path> <model_path> <output_path>
+#          视频路径        模型路径   处理后的保存路径
+``` 
 
 ## 3、trt模型相关
 > 要提前装好tensorRT

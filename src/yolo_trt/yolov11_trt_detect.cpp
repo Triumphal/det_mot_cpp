@@ -161,7 +161,7 @@ vector<DetectionBox> YoloDetect::postprocess() {
         spdlog::debug("第{}个:[{}, {}, {}, {}]", idx, bbox.x, bbox.y, bbox.width, bbox.height);
         // 坐标映射
         final_detections.push_back(
-            {bbox.x, bbox.y, bbox.x + bbox.width, bbox.y + bbox.height, class_ids[idx], scores[idx]});
+            {(double)bbox.x, (double)bbox.y, (double)(bbox.x + bbox.width), (double)(bbox.y + bbox.height), class_ids[idx], scores[idx]});
     }
 
     return final_detections;

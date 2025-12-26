@@ -24,13 +24,13 @@ void infer_trt(int argc, char** argv) {
         image_path = argv[1];
         spdlog::info("使用自定义图像路径: {}", image_path);
     } else {
-        spdlog::info("使用默认图像路径: ../../data/bus.jpg");
+        spdlog::info("使用默认图像路径: ../data/bus.jpg");
     }
     if (argc > 2) {
         model_path = argv[2];
         spdlog::info("使用自定义模型路径: ", model_path);
     } else {
-        spdlog::info("使用默认模型路径: ../../model/yolo11n.plan");
+        spdlog::info("使用默认模型路径: ../model/yolo11n.plan");
     }
     if (argc > 3) {
         output_path = argv[3];
